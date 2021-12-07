@@ -1,0 +1,232 @@
+{
+	"compiler": {
+		"version": "0.5.17+commit.d19bba13"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "accountAddress",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "LogDepositMade",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "accountAddress",
+						"type": "address"
+					}
+				],
+				"name": "LogEnrolled",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "accountAddress",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "withdrawAmount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "newBalance",
+						"type": "uint256"
+					}
+				],
+				"name": "LogWithdrawal",
+				"type": "event"
+			},
+			{
+				"payable": true,
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
+				"constant": false,
+				"inputs": [],
+				"name": "deposit",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": true,
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [],
+				"name": "enroll",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "enrolled",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "getBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "withdrawAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "withdraw",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"methods": {
+				"deposit()": {
+					"return": "The balance of the user after the deposit is made"
+				},
+				"enroll()": {
+					"return": "The users enrolled status"
+				},
+				"getBalance()": {
+					"return": "The balance of the user"
+				},
+				"withdraw(uint256)": {
+					"details": "This does not return any excess ether sent to it",
+					"params": {
+						"withdrawAmount": "amount you want to withdraw"
+					},
+					"return": "The balance remaining for the user"
+				}
+			}
+		},
+		"userdoc": {
+			"methods": {
+				"deposit()": {
+					"notice": "Deposit ether into bank"
+				},
+				"enroll()": {
+					"notice": "Enroll a customer with the bank"
+				},
+				"getBalance()": {
+					"notice": "Get balance"
+				},
+				"withdraw(uint256)": {
+					"notice": "Withdraw ether from bank"
+				}
+			}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/SimpleBank.sol": "SimpleBank"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/SimpleBank.sol": {
+			"keccak256": "0xe3bde07185aad5ecf40efac81aef9368ba0da33168c6c3ff8623bdaa757e2625",
+			"urls": [
+				"bzz-raw://7686a115b4764b1181656f3615190c4fc39d6a6396438c041b1a5be0dff095a0",
+				"dweb:/ipfs/QmdyBojWKy8cFCSE9dPBR36aAeaynRRVDVBTNeHXVXtVoC"
+			]
+		}
+	},
+	"version": 1
+}
